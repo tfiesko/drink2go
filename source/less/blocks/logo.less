@@ -10,3 +10,24 @@
   object-fit: contain;
   margin: 0 auto;
 }
+
+.logo__title {
+  display: none;
+  width: 126px;
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    display: flex;
+  }
+
+  .logo__title {
+    display: block;
+  }
+}

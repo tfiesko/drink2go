@@ -10,10 +10,25 @@
   position: relative;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  max-width: 1270px;
 }
 
 .header__logo {
   margin-right: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .header__container {
+
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .header__logo {
+    margin-right: 0;
+  }
 }
