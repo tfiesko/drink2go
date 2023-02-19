@@ -1,0 +1,67 @@
+.control__input {
+  margin: 0;
+  appearance: none;
+
+  vertical-align: text-bottom;
+
+  &::before {
+    display: block;
+
+    content: "";
+
+    width: 24px;
+    height: 24px;
+
+    background-color: @base_white;
+    border-radius: 50%;
+  }
+
+  &[type="radio"] {
+    &::before {
+      border: 2px solid @base_grey;
+    }
+
+    &:checked::before {
+      border-color: @base_primary;
+
+      outline: 9px solid @base_primary;
+      outline-offset: -15px;
+    }
+  }
+
+  &[type="checkbox"] {
+    position: relative;
+
+    &::before {
+      width: 42px;
+
+      border-radius: 12px;
+      background-color: @base_grey;
+    }
+
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+
+      display: block;
+
+      content: "";
+
+      width: 20px;
+      height: 20px;
+
+      background-color: @base_white;
+      border-radius: 50%;
+    }
+
+    &:checked::before {
+      background-color: @base_primary;
+    }
+
+    &:checked::after {
+      left: auto;
+      right: 2px;
+    }
+  }
+}

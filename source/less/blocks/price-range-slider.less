@@ -1,0 +1,37 @@
+.price-range-slider {
+  position: relative;
+
+  width: 280px;
+  height: 4.18px;
+  margin: 15px 0 15px;
+
+  background-color: @light_grey;
+}
+
+.price-range-slider__scale {
+  position: absolute;
+
+  height: 4.18px;
+
+  background-color: @primary_lighter;
+}
+
+.price-range-slider__toggle {
+  position: absolute;
+  top: -10px;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: @base_white;
+  border: 2px solid @primary_lighter;
+  border-radius: 50%;
+
+  &--min {
+    left: -2px;
+  }
+
+  &--max {
+    right: -2px;
+  }
+}

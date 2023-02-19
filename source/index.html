@@ -111,11 +111,18 @@
             Каталог кофейных напитков
           </p>
           <form class="catalog__filter-form filter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="filter-form__group">
+            <fieldset class="filter-form__group filter-form__group--price">
               <legend class="filter-form__group-legend">Цена</legend>
-              <div class="price-range-slider"></div>
-              <input class="filter-form__price-field" type="number" value="0" name="min-price">
-              <input class="filter-form__price-field" type="number" value="900" name="max-price">
+              <div class="price-range-slider">
+                <div class="price-range-slider__scale" style="left: 0; width: 240px;">
+                  <button class="price-range-slider__toggle price-range-slider__toggle--min" aria-label="Изменить минимальную цену"></button>
+                  <button class="price-range-slider__toggle price-range-slider__toggle--max" aria-label="Изменить максимальную цену"></button>
+                </div>
+              </div>
+              <div class="filter-form__price-wrapper">
+                <input class="filter-form__price-field" type="number" min="0" value="0" name="min-price">
+                <input class="filter-form__price-field" type="number" min="0" value="900" name="max-price">
+              </div>
             </fieldset>
             <fieldset class="filter-form__group">
               <legend class="filter-form__group-legend">Наличие молока</legend>
@@ -138,29 +145,31 @@
             </fieldset>
             <fieldset class="filter-form__group">
               <legend class="filter-form__group-legend">Страна произрастания</legend>
-              <label>
+              <label class="filter-form__group-title control">
                 <input class="control__input" type="checkbox" name="Brazil" checked>
                 <span class="control__label">Бразилия</span>
               </label>
-              <label>
+              <label class="filter-form__group-title control">
                 <input class="control__input" type="checkbox" name="Ethiopia">
                 <span class="control__label">Эфиопия</span>
               </label>
-              <label>
+              <label class="filter-form__group-title control">
                 <input class="control__input" type="checkbox" name="Colombia">
                 <span class="control__label">Колумбия</span>
               </label>
-              <label>
+              <label class="filter-form__group-title control">
                 <input class="control__input" type="checkbox" name="Costa-Rica">
                 <span class="control__label">Коста-Рика</span>
               </label>
-              <label>
-                <input class="control__input" type="checkbox" name="Peru">
+              <label class="filter-form__group-title control">
+                <input class="control__input" type="checkbox" name="Peru" disabled>
                 <span class="control__label">Перу</span>
               </label>
             </fieldset>
-            <button class="button filter-form__submit" type="submit">Применить фильтр</button>
-            <button class="button filter-form__reset" type="reset">Сбросить фильтр</button>
+            <div class="filter-form__buttons-container">
+              <button class="button filter-form__button filter-form__submit" type="submit">Применить фильтр</button>
+              <button class="button filter-form__button filter-form__reset button--white" type="reset">Сбросить фильтр</button>
+            </div>
           </form>
           <form class="sort-form" action="https://echo.htmlacademy.ru/" method="post">
             <label>
