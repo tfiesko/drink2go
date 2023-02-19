@@ -1,0 +1,72 @@
+.footer-section {
+  padding-bottom: 8px;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &--contacts {
+    padding-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+  }
+}
+
+.footer-section__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.footer-section__header {
+  margin-top: 19px;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @base_primary;
+  text-transform: none;
+}
+
+.footer-section__item {
+  margin-bottom: 20px;
+}
+
+.footer-section__tel-link {
+  font-style: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-section__address {
+  padding-right: 20px;
+}
+
+.footer-section__address,
+.footer-section__tel {
+  position: relative;
+
+  padding-left: 18px;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    content: "";
+
+    display: block;
+    width: 13px;
+    height: 16px;
+  }
+}
+
+.footer-section__tel::before {
+  background-image: url("../../img/Phone.svg");
+}
+
+.footer-section__address::before {
+  background-image: url("../../img/Address.svg");
+}
