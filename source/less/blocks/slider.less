@@ -1,0 +1,53 @@
+.slider__button {
+  background-image: url("../../img/slider-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 20px;
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-image: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  &:active {
+    &::before {
+      background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 714px;
+    width: 80px;
+  }
+
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    display: none;
+  }
+
+  &--next {
+    transform: scaleX(-1);
+  }
+}
+
+.slider__pagination span {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__pagination span {
+    display: inline-block;
+    width: 62px;
+    height: 4px;
+
+    background-color: @base_primary;
+    border-radius: 0;
+  }
+}

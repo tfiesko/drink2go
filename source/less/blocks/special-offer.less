@@ -1,0 +1,108 @@
+.special-offer {
+  min-height: 346px;
+  padding-top: 310px;
+
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    content: "";
+
+    display: block;
+    width: 280px;
+    height: 280px;
+
+    background-size: contain;
+
+    transform: translateX(-50%);
+  }
+
+  &--first {
+    background-color: @flat_white;
+
+    &::before {
+      background-image: url("../../img/slider/flat-white.png");
+    }
+  }
+
+  &--second {
+    background-color: @lavender_latte;
+
+    &::before {
+      background-image: url("../../img/slider/lavender.png");
+    }
+  }
+
+  &--third {
+    background-color: @espresso;
+
+    &::before {
+      background-image: url("../../img/slider/espresso.png");
+    }
+  }
+}
+
+.special-offer__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.special-offer__product-name {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.special-offer__product-description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.special-offer__old-price {
+  margin-right: 6px;
+
+  font-size: 16px;
+  line-height: 32px;
+  color: @base_primary;
+  text-decoration: line-through;
+}
+
+.special-offer__new-price {
+  margin-right: 20px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.special-offer__button {
+  display: block;
+}
+
+@media (min-resolution: 2dppx) {
+  .special-offer {
+    &--first {
+      &::before {
+        background-image: url("../../img/slider/flat-white@2x.png");
+      }
+    }
+
+    &--second {
+      &::before {
+        background-image: url("../../img/slider/lavender@2x.png");
+      }
+    }
+
+    &--third {
+      &::before {
+        background-image: url("../../img/slider/espresso@2x.png");
+      }
+    }
+  }
+}
