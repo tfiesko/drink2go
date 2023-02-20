@@ -13,7 +13,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1270px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 60px;
 }
 
 .header__logo {
@@ -22,7 +25,10 @@
 
 @media (min-width: @tablet-width) {
   .header__container {
-
+    width: 728px;
+    min-height: 80px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -35,6 +41,6 @@
 
 @media (min-width: @desktop-width) {
   .header__container {
-    max-width: 1360px;
+    width: 1360px;
   }
 }

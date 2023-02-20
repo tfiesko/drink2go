@@ -2,7 +2,7 @@
   width: 280px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   font-size: 16px;
   line-height: 24px;
@@ -22,4 +22,11 @@
 
   text-transform: lowercase;
   color: @base_primary;
+}
+
+@media (min-width: @desktop-width) {
+  .sort-form {
+    grid-column: span 2;
+    grid-row-start: 1;
+  }
 }

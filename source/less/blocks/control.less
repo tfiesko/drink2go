@@ -6,11 +6,11 @@
 
   &::before {
     display: block;
-
-    content: "";
-
     width: 24px;
     height: 24px;
+    margin-right: 5px;
+
+    content: "";
 
     background-color: @base_white;
     border-radius: 50%;
@@ -18,6 +18,9 @@
 
   &[type="radio"] {
     &::before {
+      width: 21px;
+      height: 21px;
+
       border: 2px solid @base_grey;
     }
 
@@ -33,7 +36,7 @@
     position: relative;
 
     &::before {
-      width: 42px;
+      width: 45px;
 
       border-radius: 12px;
       background-color: @base_grey;
@@ -60,8 +63,7 @@
     }
 
     &:checked::after {
-      left: auto;
-      right: 2px;
+      left: 20px;
     }
   }
 }

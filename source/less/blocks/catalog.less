@@ -1,9 +1,14 @@
 .catalog {
+  padding-top: 50px;
   padding-bottom: 24px;
 
   text-align: center;
 
   background-color: @lightest_grey;
+}
+
+.catalog__title {
+  margin: 0;
 }
 
 .catalog__filter-form {
@@ -13,6 +18,7 @@
 
 .catalog__products-list {
   width: 280px;
+  min-height: 420px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,10 +27,32 @@
   .catalog__products-list {
     width: 728px;
   }
+
+  .catalog__filter-form {
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 240px 220px 220px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__columns-wrapper {
+    display: grid;
+    width: 1360px;
+    grid-template-columns: 345px 1011px;
+    grid-template-rows: 54px auto;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .catalog__products-list {
     width: 1011px;
+  }
+
+  .catalog__filter-form {
+    display: block;
   }
 }

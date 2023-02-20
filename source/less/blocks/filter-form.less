@@ -9,6 +9,7 @@
 .filter-form__group {
   margin: 0;
   padding: 0;
+  padding-top: 18px;
 
   border: none;
 
@@ -19,11 +20,17 @@
 
 .filter-form__group-title {
   display: block;
-  margin-bottom: 21.45px;
+  margin-bottom: 19.45px;
+
+  &--brazil {
+    margin-bottom: 17px;
+    margin-top: 3px;
+  }
 }
 
 .filter-form__price-wrapper {
   width: 280px;
+  margin-bottom: 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,6 +62,7 @@
 
 .filter-form__buttons-container {
   width: 160px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -65,6 +73,44 @@
   width: 100%;
 }
 
-.filter-form__button:first-child {
-  margin-bottom: 24.5px;
+.filter-form__button {
+  min-height: 45px;
+
+  &:first-child {
+    margin-bottom: 24.5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filter-form__price-field {
+    width: 67px;
+  }
+
+  .filter-form__price-wrapper {
+    width: 220px;
+  }
+
+  .filter-form__buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+    height: 40px;
+    grid-column: span 3;
+  }
+
+  .filter-form__button {
+    padding-left: 3.4px;
+    padding-right: 3.4px;
+
+    &:first-child {
+      width: 148px;
+    }
+    width: 138px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-form__buttons-container {
+    margin-left: 0;
+  }
 }

@@ -44,6 +44,11 @@
   }
 }
 
+.special-offer__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
 .special-offer__wrapper {
   width: 280px;
   margin: 0 auto;
@@ -54,6 +59,7 @@
   line-height: 48px;
   font-weight: 700;
 
+  margin-top: 4px;
   margin-bottom: 10px;
 }
 
@@ -82,7 +88,54 @@
 }
 
 .special-offer__button {
-  display: block;
+  box-sizing: border-box;
+  width: 113px;
+  height: 40px;
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .special-offer {
+    min-height: 272px;
+    padding-top: 60px;
+    padding-bottom: 496px;
+
+    &::before {
+      top: auto;
+      bottom: 0;
+
+      width: 476px;
+      height: 476px;
+    }
+
+    &--first {
+      background-color: transparent;
+      background-image: linear-gradient(to bottom, @flat_white 640px, @base_white 640px);
+
+      &::before {
+        background-image: url("../../img/slider/flat-white-tablet.png");
+      }
+    }
+  }
+
+  .special-offer__wrapper {
+    width: 608px;
+  }
+
+  .special-offer__product-name {
+    margin-bottom: 16px;
+
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .special-offer__product-description {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 @media (min-resolution: 2dppx) {
